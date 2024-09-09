@@ -1,0 +1,90 @@
+---
+layout: default
+description: Geo data collating with Viking and map-making with QGIS - by D Quinton
+title: Virtual box
+id: tutor
+---
+
+
+<div class="parent"><a href="../tutorials.html">Tutorials</a> ></div>
+
+<div class="cont">
+<div class="bullet">
+	
+
+Introducing  Oracle's virtual box...
+<br><br>
+this is a big-button GUI but it runs reliably and also has a ton of commandline tools with it.
+<br><br>
+Here are my tips:
+<br><br>
+1. download the deb archive and also the user manual (which is very complete)
+<br><br>
+2. before you install make sure you have linux-headers installed - the same version as your kernel - run  
+ 
+ <form>
+<textarea name="T" id="cmd" rows="1" cols="30">
+uname -r</textarea>
+&nbsp;<input type="button" class="submitLink" value="Select all" onClick="javascript:this.form.T.focus();this.form.T.select();">
+</form>
+to check your running kernel version, and then
+
+ <form>
+<textarea name="T" id="cmd" rows="1" cols="30">
+apt-search linux-headers</textarea>
+&nbsp;<input type="button" class="submitLink" value="Select all" onClick="javascript:this.form.T.focus();this.form.T.select();">
+</form>
+to see find the headers package, or
+
+ <form>
+<textarea name="T" id="cmd" rows="1" cols="30">
+apt-search linux-image</textarea>
+&nbsp;<input type="button" class="submitLink" value="Select all" onClick="javascript:this.form.T.focus();this.form.T.select();">
+</form>
+to see what kernels are available for upgrading
+<br>
+
+<br>  <ul><li>after the install, add your user to the group vboxusers, to enable usb in a VM, with:
+<br>
+<form>
+<textarea name="T" id="cmd" rows="1" cols="50">
+sudo adduser $USER vboxusers</textarea>
+&nbsp;<input type="button" class="submitLink" value="Select all" onClick="javascript:this.form.T.focus();this.form.T.select();">
+</form></ul>
+<br><br>
+
+3. creating a new virtual machine is straight forward,
+
+<br>   <ul><li>set up unattended install by entering the user/pw for the VM
+   <li>selecting a fixed virtual hard disk will allow perhaps a faster machine - but watch you don't make it too big as you can't resize it ever if it's a fixed size, it is basically what the machine will 'see' as its hard disk, so resizing it later would involve magic indeed. 50Gb on a 110Gb solid state drive was too large for my Win10 install, after making three snapshots, the drive got too full, so that I couldn't 'save' the state of the VM. I had to 'move' the VM to a larger disk, then delete snapshots (which needs space for merging them) and then move it back again -and now I can't take more than one snapshot because of the space issue!
+<br><br></ul>
+4. you can download a Win10 ISO and install it and run it for free (legally), without purchasing a license key, and the only disabled things are some customization, and virus protection are blocked.
+
+<br><br>
+5. once you install a VM (which happens on the 1st time you hit run) then from inside the VM system, whether windows or Linux etc, locate the Guest Additions ISO, add it to the optical drive, and install it -it enables high res screen, mouse control, shared media, and probably shared networking, as well as shared clipboard (between guest and the host)
+
+<br><br>
+6. in a running VM there's controls down the bottom, you can right click on the network icon to configure it (incase you are not eth0 but usb0 etc)
+
+<br><br>
+7. you can run a file manager, to tranfer files between host and guest, and you need to enter the guest user name and pw to start a tranfer session
+ 
+<br>  <ul><li>or you can set up a shared folder and have it show up as a drive in the guest, which means a permanant shared area.
+<br><br></ul>
+8. snapshots are saved points in time and each one only saves the changes from the previous one, otherwise they would be huge -they can still be quite big, at 20Gb a piece.
+
+<br>  <ul> <li>when deleting one VBox has to merge the differences into the next one
+   <li>I'd say it's probably best to make one at a stable state after installing anything or optimizing the system -but hey, why not just use a 2TB hard disk for VMs?
+<br><br></ul>
+9. You can also clone a VM, to run it like a branch off the 1st VM, and you can export a VM to a (large) file (for backup?) and import them too.
+
+<br><br>
+10. running the VM, some keyboard commands will be seen by the VM and not the host (unless you hit the host key, Right CTRL), like Alt-Tab switch apps, or Ctrl-Alt-left/right switch desktops, so it might feel easier hitting the desktop spaces on the side panel.
+
+<br><br>
+11. Pause the VM to stop CPU usage, but note that the memory you allocate to the VM cannot be released to the guest.
+
+<br> <ul> <li>hit pause before sending the host to supend mode, as otherwise the guest may not see the suspend signal and on host wake the VM is found frozen and needs the window killing!
+<br><br>
+</div>
+</div>

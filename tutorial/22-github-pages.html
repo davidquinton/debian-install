@@ -338,8 +338,15 @@ Normally, you'd create a dir to clone your git repo into, cd there and run
 
 <form>
 <textarea name="T" id="cmd" rows="1" cols="50">
-git clone https://github.com/user/repository.git</textarea>&nbsp;<input type="button" class="submitLink" value="Select all" onClick="javascript:this.form.T.focus();this.form.T.select();">
+git clone https://github.com/user/<repository>.git</textarea>&nbsp;<input type="button" class="submitLink" value="Select all" onClick="javascript:this.form.T.focus();this.form.T.select();">
 </form>
+<br>
+(For a private repo, do this instead)
+<form>
+<textarea name="T" id="cmd" rows="2" cols="50">
+git clone https://<personal-access-token>@github.com/username/<repository>.git</textarea>&nbsp;<input type="button" class="submitLink" value="Select all" onClick="javascript:this.form.T.focus();this.form.T.select();">
+</form>
+<br>
 
 or, without cloning, run
 <form>
@@ -382,7 +389,7 @@ Note: if you don't stage new files (add to tracking), you will get this kind of 
 
 to push all the new files or updated ones to Github, first make sure you have a personal authentication token from the Github site -> Settings > Developer > Personal Access Tokens, and check Repo and generate, and copy it.
 <br><br>
-then add to the file .git/config like this https://<GITHUB_ACCESS_TOKEN>@github.com/<GITHUB_USERNAME>/<REPOSITORY_NAME>.git
+then add to the file .git/config like this https://&#60;personal-access-token>@github.com/&#60;username>/&#60;repository>.git
 <br><br>
 Then you can push changes to remote..
 <form>
