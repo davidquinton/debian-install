@@ -225,7 +225,8 @@ h4 {
 }
 .bullet ul li { 
   margin-left: 20px;
-  padding: 6px 6px 0px;
+  padding: 6px 6px 8px;
+  font-size: 0.8rem;
   line-height: 110%; 
 }
 
