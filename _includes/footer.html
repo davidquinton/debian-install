@@ -1,6 +1,19 @@
 <br>
+<script>
+document.querySelectorAll("textarea").forEach(function(textarea) {
+  textarea.style.height = textarea.scrollHeight + "px";
+  
+
+  textarea.addEventListener("input", function() {
+    this.style.height = "auto";
+    this.style.height = this.scrollHeight + "px";
+  });
+});
+</script>
+
+</body>
 <footer style="text-align:center; ">
 <a href="{{site.baseurl}}/index.html" >Home</a> | <a href="{{site.baseurl}}/content.html">Content</a> | <a href="{{site.baseurl}}/sitemap.html">Site Map</a> | <a href="#">TOP</a>
 </footer>
-</body>
+
 </html>

@@ -86,7 +86,7 @@ footer a {
   color: #E9E9E9;
   min-height: 600px;
   font-family:  PT Sans, Dejavu sans, Tahoma, sans-serif;
-  font-size:1rem;
+  font-size: .8rem;
   line-height: 140%;
   margin: 0px 30px 0px;     /* grey margin off the page sides */
   padding: 70px 0px 40px 100px;  /* body text from top, edges, bottom */
@@ -97,11 +97,11 @@ footer a {
 .cont { 
   padding: 80px 0px 40px 100px ;  /* body text from top, edges, bottom */ /* body text from top, edges, bottom */
   padding-right: 30%;
-  font-size: .9rem;
+  font-size: 1rem;
 }}
 
 p, a {
-  font-size:1rem;
+  font-size:.9rem;
   line-height: 140%;
 }
 
@@ -314,6 +314,8 @@ textarea#install {
   margin: 6px 0px 4px;
   border-radius: 5px 5px 2px 2px;
   color: #FD7D94;
+  font-size: 1.9rem;
+  width:600px;
 }
 
 textarea#cmd { 
@@ -323,6 +325,8 @@ textarea#cmd {
   margin: 6px 0px 4px;
   border-radius: 5px 5px 2px 2px;
   color: #FFAD68;
+  font-size: 1.9rem;
+  width:600px;
 }
 
 textarea#file { 
@@ -332,6 +336,16 @@ textarea#file {
   margin: 6px 0px 4px;
   border-radius: 5px 5px 2px 2px;
   color: #11AE06;
+  font-size: 1.9rem;
+  width:600px;
+}
+
+@media only screen and (min-device-width: 768px){
+textarea#install, 
+textarea#cmd, 
+textarea#file {
+  font-size: 1rem;
+  width:600px; }
 }
 
 input.submitLink {
