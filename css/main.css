@@ -302,43 +302,26 @@ table.desktop {
 	font-size: .9em;
 	} 
 
-.inst {  color:#7C2020;}
-.cmd {   color:#D57C2C;}
-.file {  color:#0F4F0B;}
-.prob {  color:#D84CC4;}
+.inst {color:#7C2020;}
+.cmd {color:#D57C2C;}
+.file {color:#0F4F0B;}
+.prob {color:#D84CC4;}
 
-textarea#install { 
-  background-color : #0E0E0E;
-  border: 2px solid #6C6D80;
-  padding: 8px;
-  margin: 6px 0px 4px;
-  border-radius: 5px 5px 2px 2px;
-  color: #FD7D94;
-  font-size: 1.9rem;
-  width:600px;
-}
-
-textarea#cmd { 
-  background-color : #0E0E0E;
-  border: 2px solid #6C6D80;
-  padding: 8px;
-  margin: 6px 0px 4px;
-  border-radius: 5px 5px 2px 2px;
-  color: #FFAD68;
-  font-size: 1.9rem;
-  width:600px;
-}
-
+textarea#install,
+textarea#cmd,
 textarea#file { 
   background-color : #0E0E0E;
   border: 2px solid #6C6D80;
   padding: 8px;
   margin: 6px 0px 4px;
   border-radius: 5px 5px 2px 2px;
-  color: #11AE06;
-  font-size: 1.9rem;
+  font-size: 1.7rem;
   width:600px;
 }
+
+textarea#install { color: #FD7D94;}
+textarea#cmd { color: #FFAD68;}
+textarea#file { color: #11AE06;}
 
 @media only screen and (min-device-width: 768px){
 textarea#install, 
