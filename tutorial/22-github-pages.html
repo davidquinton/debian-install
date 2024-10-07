@@ -8,7 +8,7 @@ id: tutor
 <div class="onpage" id="onpage">
   <ul>
     <li>
-        On this page &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; <a href="#">TOP</a>
+        On page &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; <a href="#">TOP</a>
              <ul>
                 <li><a href="#1">1. Make a Github web site</a></li>
                 <li><a href="#2">2. Get Jekyll</a></li>
@@ -287,11 +287,11 @@ and in the header, e.g. &#123;&#123;site.baseurl}}/css/styles.css etc - I use bl
 top-level pages can just remove the "/" before the url so that they point relative to pages on same or a level down, and not to root github.
 <br><br>
 
-images: change<b> href="../</b> ---> <b>href="&#123;&#123;ssite.baseurl}}/ </b>
+images: change<b> href="../</b> to... <b>href="&#123;&#123;site.baseurl}}/ </b>
 <br><br>
-and also <b>src="../ </b>---> <b>src="&#123;&#123;ssite.baseurl}}/</b>
+and also <b>src="../ </b> to... <b>src="&#123;&#123;ssite.baseurl}}/</b>
 <br><br>
-Also,  links in css files, such as, "background-image: url(&#123;&#123;ssite.baseurl}}/zimages/banner1.gif);"
+Also,  links in css files, such as, "background-image: url(&#123;&#123;site.baseurl}}/zimages/banner1.gif);"
 
 <br><br><br><br>
 
@@ -314,7 +314,7 @@ jekyll serve --watch --baseurl /project-name/</textarea>&nbsp;<input type="butto
 <br>
 The resulting html files are inside the _site dir - but these are purely for serving to localhost, because you upload from the build directory to Github and Jekyll does its work at there too.
 <br><br>
-Then preview the site (index.html) by browsing localhost:4000
+Then preview the site (index.html) by browsing localhost:4000/project-name
 <br><br>
 because of the --watch option, jekyll will rebuild the site every time a file is saved, and all you need to do is hit refresh in the browser and your changes will be seen.
 <br><br>

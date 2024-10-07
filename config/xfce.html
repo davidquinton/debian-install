@@ -5,10 +5,14 @@ title: XFCE
 id: config
 ---
 
+<div class="parent"><a href="../configure.html">Configure</a> ></div>
+
+<div class="cont">
+
 <div class="onpage">
   <ul>
     <li>
-        On this page &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; <a href="#">TOP</a>
+        On page &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; <a href="#">TOP</a>
              <ul>
                 <li><a href="#1">The Xfce menu</a></li>
                 <li><a href="#2">change the clock format</a></li>
@@ -25,23 +29,21 @@ id: config
    <a href="#3">keyboard shortcuts</a><br>
 </td></tr></table></div>
 
-<div class="parent"><a href="../configure.html">Configure</a> ></div>
 
 
-<div class="cont">
-
-
+<table cellpadding="4" border="1" align="right" width="35%" ><tr><td>Xfce FAQ <a href="http://wiki.xfce.org/faq">http://wiki.xfce.org/faq</a><br>
+    Xfce tips <a href="http://wiki.xfce.org/tips">http://wiki.xfce.org/tips</a><br>
+    Xfce archive (updates) <a href="http://archive.xfce.org/src/xfce">http://archive.xfce.org/src/xfce</a></td></tr>
+    </table> <br><br><br>
 There's not much on this page, just what I noted when I was using this Desktop a few years back! 
 
-<br><br><br><br>
 
-<table cellpadding="4" border="1" align="right" width="35%" style="border-collapse: collapse; "><tr><td>Xfce FAQ <a href="http://wiki.xfce.org/faq">http://wiki.xfce.org/faq</a><br>
-    Xfce tips <a href="http://wiki.xfce.org/tips">http://wiki.xfce.org/tips</a><br>
-    Xfce archive (updates) <a href="http://archive.xfce.org/src/xfce">http://archive.xfce.org/src/xfce</a></td></tr></table>
+
     
+    <br><br><br>
 <h2 id="1" class="tag">The Xfce menu</h2>
 
-
+<br>
     
 The Xfce desktop installs a <b>menu file</b> to store contents of the menu, which are: <b>root entries</b> (the Run program etc) and <b>sub-menus</b> which pop-up a programs list.  
 <br><br>
@@ -73,8 +75,10 @@ e.g. web browser, about xfce, help
 <ul><li> in the copied menu file edit the submenu entries</li></ul>
 <br>
 <h3>3. Add new sub-menus</h3>
+<div class="bullet">
 <ul><li>a straight forward business of duplicating an existing sub-menu entry, from &#60;Menu> ... &#60;/Menu>, and changing its name and category</li>
     <li>then you must add a <b>.directory file</b> for the new sub-menu in ~/.local/share/desktop-directories with the content, for example:</li></ul>
+   
     <form><textarea name="T" id="cmd" rows="1" cols="80">
 nano ~/.local/share/desktop-directories/gps.directory</textarea>
 &nbsp;<input type="button" class="submitLink" value="Select all" onClick="javascript:this.form.T.focus();this.form.T.select();">
@@ -93,6 +97,7 @@ Comment=GPS apps</textarea>
    <ul><li>the name must be the same as for the sub-menu and the sub-menu entry must point to the .directory file name to locate it.</li>
 <li>get the icon name from launcher properties "select an icon". </li></ul>
 <br>
+
 <h3>4. Move a program to another sub-menu</h3>
  <ul><li>the easiest way is to look through the sub-menus for programs in the wrong places, and then find their .desktop file and alter its category (KDE apps will be in the kde folder). </li> 
  <li>If you enter a valid category the program will move to the new sub-menu as soon as you re-open the menu.</li></ul>
@@ -105,7 +110,7 @@ Comment=GPS apps</textarea>
 <br>
 Official guide is at the <a href="http://wiki.xfce.org/howto/customize-menu">xfce wiki</a>
 
-
+</div>
 
 <br><br>
 <br><br>

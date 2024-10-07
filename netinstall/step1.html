@@ -5,32 +5,38 @@ title: Step 1 - Netinstall CD
 id: net
 ---
 
+<div class="parent"><a href="../netinstall.html">Netinstall</a> ></div>
+
+<div class="cont">
+
 <div class="onpage">
   <ul>
-    <li>
-        On this page &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; <a href="#">TOP</a>
-             <ul>
-                <li><a href="#1">Pre-install, get an ISO</a></li>
-                <li><a href="#2">Prepare to install</a></li>
-                <li><a href="#3">Get a partition ready!</a></li>
-                <li><a href="#4">The install</a></li>
-                <li><a href="#5">Sources list</a></li>
-                <li><a href="#6">Prevent "recommended"</a></li>
-                <li><a href="#7">Install the desktop</a></li>
-                <li><a href="#8">Install Thunar</a></li>
-                <li><a href="#9">Sudoers file</a></li>
-                <li><a href="#10">Enable the wireless</a></li>
-                <li><a href="#11">Add groups</a></li>
-                <li><a href="#12">Auto mount partitions</a></li>
-                <li><a href="#13">Quick desktop settings</a></li>
-                <li><a href="#14">Build dependencies</a></li>
-             </ul>
-    </li>
+   <li>
+      On page &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; <a href="#">TOP</a>
+          <ul>
+            <li><a href="#0">Netinstall method</a></li>
+            <li><a href="#1">Pre-install, get an ISO</a></li>
+            <li><a href="#2">Prepare to install</a></li>
+            <li><a href="#3">Get a partition ready!</a></li>
+            <li><a href="#4">The install</a></li>
+            <li><a href="#5">Sources list</a></li>
+            <li><a href="#6">Prevent "recommended"</a></li>
+            <li><a href="#7">Install the desktop</a></li>
+            <li><a href="#8">Install Thunar</a></li>
+            <li><a href="#9">Sudoers file</a></li>
+            <li><a href="#10">Enable the wireless</a></li>
+            <li><a href="#11">Add groups</a></li>
+            <li><a href="#12">Auto mount partitions</a></li>
+            <li><a href="#13">Quick desktop settings</a></li>
+            <li><a href="#14">Build dependencies</a></li>
+          </ul>
+   </li>
   </ul>
 </div>
 
 <div class="pagemenu">
 <table cellpadding="5"><tr><td>
+   <a href="#0">Netinstall method</a><br>
    <a href="#1">Pre-install, get an ISO</a><br>
    <a href="#2">Prepare to install</a><br>
    <a href="#3">Get a partition ready!</a><br>
@@ -47,14 +53,12 @@ id: net
    <a href="#14">Build dependencies</a><br>
 </td></tr></table></div>
 
-<div class="parent"><a href="../netinstall.html">Netinstall</a> ></div>
-
-<div class="cont">
 
 
 <span class="bblue">updated March 2023</span>
 <br><br><br>
-
+<b id="0" class="tag">Netinstall method</b>
+<br><br>
 The following method is ideal for building a minimal Devuan-Debian install (without bloat) installing just the basic system without a desktop environment or any software packages, following which, you boot into a command prompt (or you can chroot into it from a working Debian system) and install whatever else you need, through the internet. 
 <br><br>
 The Netinstall ISO does give you the choice to install a full Desktop Environment as well, if you choose to, but then you can't specify exactly what you want installed at that level.
@@ -201,16 +205,19 @@ On a PC which already has an OS installed, use the Gnome partition editor (gpart
 <br> <br>
 You can get the <a href="http://gparted.org/download.php">Gparted Live CD</a> or install it if you have a Linux OS already on the PC.  
 <br>
-<div class="numb"><ol>
-<li>shrink a large partition which has some unused space, to make enough for your combined system and home area, perhaps 30 or 40Gb.  </li> 
-<br>
+
+1. shrink a large partition which has some unused space, to make enough for your combined system and home area, perhaps 30 or 40Gb. 
+<br><br>
 Note: it's not advisable to move a partition along on the hdd, as Gparted will actually copy the whole file system, sector by sector, taking a very long time.  Shrinking from the right should be fast, but if you need to <i>move</i> the partition along to the <i>right</i>, it would be better to copy the data off it, delete it and then create new partitions.
 <br><br>
-<li>make an <b>Extended</b> partition, size = total size of the partitions needed for Linux, or else resize existing Extended partition to add Logical partitions to it.</li>
-<li>in the extended partition, make a <b>Logical</b> partition for the Linux system, 15-20GB, formatted with ext4, 
-<li>and another <b>Logical</b> for the home partition (if you choose to make it separate - actually a good idea because then you can make a fresh install or clone any time over the system without wiping over your all your configuration files), anything from 2Gb to 20Gb... formatted ext3 or ext4 also.</li>
-<li>then a <b>swap</b> area, which just needs 1Gb to work fine in my opinion and formatted as Linux swap - you can also forget this and just set up a swapfile on your system partition.</li>
-</ol></div>
+2. make an <b>Extended</b> partition, size = total size of the partitions needed for Linux, or else resize existing Extended partition to add Logical partitions to it.
+<br><br>
+3. in the extended partition, make a <b>Logical</b> partition for the Linux system, 15-20GB, formatted with ext4, 
+<br><br>
+4. and another <b>Logical</b> for the home partition (if you choose to make it separate - actually a good idea because then you can make a fresh install or clone any time over the system without wiping over your all your configuration files), anything from 2Gb to 20Gb... formatted ext3 or ext4 also.
+<br><br>
+5. then a <b>swap</b> area, which just needs 1Gb to work fine in my opinion and formatted as Linux swap - you can also forget this and just set up a swapfile on your system partition.
+
 
 <br><br>
 Windows dual-boot is beyond me nowadays.
@@ -220,7 +227,8 @@ Windows dual-boot is beyond me nowadays.
 <hr noshade="noshade">
 <br><br>
 
-<h2 id="4" class="tag">The Net install/server install CD </h2>
+<h2 id="4" class="tag">The Net install /server install CD </h2>
+<br>
 1. I chose expert install.
 <br><br>
 2. configure network hardware: insert a usb stick at prompt for network firmware.
@@ -296,8 +304,7 @@ deb-src http://deb.devuan.org/merged chimaera-updates main</textarea>
 </form>
 <br>
 
-
-<br>save the file with Ctrl-X (close file), y (yes) and Enter.
+save the file with Ctrl-X (close file), y (yes) and Enter.
 <br><br>
 
 then update your package lists (which are updated frequently at the server side repository)  
@@ -439,9 +446,10 @@ So for thenar...
 apt install thunar thunar-volman thunar-archive-plugin tumbler tumbler-plugins-extra thunar-media-tags-plugin xdg-user-dirs exiftool feh imagemagick </textarea>
 &nbsp;<input type="button" class="submitLink" value="Select all" onClick="javascript:this.form.T.focus();this.form.T.select();">
 </form>
-<br>
+
 <br><br>
 <h3>Additional installs</h3>
+<br>
 Prepare for bluetooth, NTFS and FAT32/exFAT support, ssh, archiving, printing, pgp, time, system backup
 <form>
 <textarea name="T" id="install" rows="3" cols="100">
@@ -475,15 +483,15 @@ which will allow you to safely edit the sudoers file using the friendly nano edi
 and you can either add this line after the root's line: 
 <form>
 <textarea name="T" id="file" rows="1" cols="50">
-yourusername     ALL=(ALL:ALL) ALL</textarea>
+yourusername    ALL=(ALL:ALL) ALL</textarea>
 &nbsp;<input type="button" class="submitLink" value="Select all" onClick="javascript:this.form.T.focus();this.form.T.select();">
 </form>
 
 <br>
 but the more recommended practice is to add the sudo group to sudoers, so that the file doesn't fill up with dozens of user names, like this:
-    <form>
+   <form>
 <textarea name="T" id="file" rows="1" cols="50">
-%sudo     ALL=(ALL:ALL) ALL</textarea>
+%sudo    ALL=(ALL:ALL) ALL</textarea>
 &nbsp;<input type="button" class="submitLink" value="Select all" onClick="javascript:this.form.T.focus();this.form.T.select();">
 </form>
 <br>
@@ -639,14 +647,14 @@ First of all, you can omit the USB or DVD device lines that might have been adde
 example of line for NTFS partition
 <form>
 <textarea name="T" id="file" rows="1" cols="120">
-UUID="B04C39A04C3961F0"    /media/FILES    ntfs-3g     defaults,nls=utf8,uid=1000,umask=000    0   2</textarea>
+UUID="B04C39A04C3961F0"   /media/FILES   ntfs-3g    defaults,nls=utf8,uid=1000,umask=000   0   2</textarea>
 &nbsp;<input type="button" class="submitLink" value="Select all" onClick="javascript:this.form.T.focus();this.form.T.select();">
 </form>
 <br>
 example of a data partition with ext3 format
 <form>
 <textarea name="T" id="file" rows="1" cols="120">
-UUID=a482820a-ca98-4d19-albe-d2dd53b49b06     /media/Data1    ext3    users,defaults    0   2</textarea>
+UUID=a482820a-ca98-4d19-albe-d2dd53b49b06    /media/Data1   ext3   users,defaults   0   2</textarea>
 &nbsp;<input type="button" class="submitLink" value="Select all" onClick="javascript:this.form.T.focus();this.form.T.select();">
 </form>
 <br>
@@ -690,11 +698,11 @@ If your installation CD (e.g. Debian Live Build) left you with NO fstab file at 
 example (tab separated):
 <form>
 <textarea name="T" id="file" rows="5" cols="100">
-# <file system> <mount point>   <type>  <options>       <dump>  <pass>
-proc            /proc           proc    defaults        0       0
-UUID=cc3bca0d-aee4-4b9c-95c2-57212cc36d4d    /          ext3    defaults,noatime    0       1
-UUID=ab67d8fe-d76b-4e21-abbe-e10d162e1d27    /home      ext3    defaults        0       2
-UUID=a7db1e95-4acd-4754-a043-a8d27405c316    none       swap    sw              0       0</textarea>
+# <file system> <mount point>   <type>  <options>      <dump>  <pass>
+proc         /proc         proc   defaults      0      0
+UUID=cc3bca0d-aee4-4b9c-95c2-57212cc36d4d   /        ext3   defaults,noatime   0      1
+UUID=ab67d8fe-d76b-4e21-abbe-e10d162e1d27   /home     ext3   defaults      0      2
+UUID=a7db1e95-4acd-4754-a043-a8d27405c316   none      swap   sw           0      0</textarea>
 &nbsp;<input type="button" class="submitLink" value="Select all" onClick="javascript:this.form.T.focus();this.form.T.select();">
 </form>
 
@@ -702,7 +710,7 @@ UUID=a7db1e95-4acd-4754-a043-a8d27405c316    none       swap    sw              
 currently, I put /var on its own partition as the contents change quite a lot (e.g. apt cache) and / is on a solid state disk that shouldn't need so many write operations
 <form>
 <textarea name="T" id="file" rows="1" cols="100">
-UUID=5d327347-dd0a-4540-9a2e-9e86a05db5c6    /var    ext3    defaults,noatime    0    2</textarea>
+UUID=5d327347-dd0a-4540-9a2e-9e86a05db5c6   /var   ext3   defaults,noatime   0   2</textarea>
 &nbsp;<input type="button" class="submitLink" value="Select all" onClick="javascript:this.form.T.focus();this.form.T.select();">
 </form>
 <br>
@@ -713,7 +721,7 @@ If using a swap file instead of a partition, the correct fstab line will look li
 
 <form>
 <textarea name="T" id="file" rows="1" cols="50">
-swap	/swapfile	swap    defaults    0    0</textarea>
+swap	/swapfile	swap   defaults   0   0</textarea>
 &nbsp;<input type="button" class="submitLink" value="Select all" onClick="javascript:this.form.T.focus();this.form.T.select();">
 </form>
 <br><br>
@@ -794,7 +802,7 @@ options snd_hda_intel index=1</textarea>
 
 (and note that 0 sets preferred device, incase you had two cards)<br>
 <br><br>
-<br>
+
 <b>Display:</b> select theme, Tango icons or whichever you like
 <br><br>
 <b>Set power options:</b> like close laptop lid suspends PC or turns off the display, critical battery warning, inactivity time, screen sleep time, uncheck lock screen, etc.

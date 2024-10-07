@@ -5,10 +5,14 @@ title: Configure LXDE/Openbox
 id: config
 ---
 
+<div class="parent"><a href="../configure.html">Configure</a> ></div>
+
+<div class="cont">
+
 <div class="onpage">
   <ul>
     <li>
-        On this page &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; <a href="#">TOP</a>
+        On page &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; <a href="#">TOP</a>
              <ul>
                 <li><a href="#1">Auto-start apps</a></li>
                 <li><a href="#2">PCManFM</a></li>
@@ -55,10 +59,6 @@ id: config
    <a href="#15">stop notification daemon</a><br>
 </td></tr></table></div>
 
-<div class="parent"><a href="../configure.html">Configure</a> ></div>
-
-
-<div class="cont">
 
 
 <h2 id="1" class="tag">Auto-start apps</h2>
@@ -99,12 +99,18 @@ There're another two ways to go about it...<br>
 <br><br>
 
 <h2 id="2" class="tag">PCmanFM</h2>
-<span style="color:#800080;">The LXDE file manager does not sort directories/files alphabetically?</span><br>
-look in ~/.config/pcmanfm/LXDE/pcmanfm.conf and change sort_by value to 2<br>
+
+<span class="prob">The LXDE file manager does not sort directories/files alphabetically?</span>
+<br>
+
+look in ~/.config/pcmanfm/LXDE/pcmanfm.conf and change sort_by value to 2
+<br>
 for detailed list, change view_mode to 4?
 <br><br>
+
 I would use Thunar any way, if a gui file browser is required, with its very adaptable custom right-click menu actions (see my <a href="thunar.html">Thunar page</a>).
 <br><br>
+
 The one problem with prefering Thunar, however, is that PCmanFM in LXDE controls the desktop, i.e. the desktop is a folder, so that it can hold shortcuts. So when you open a folder shortcut from the desktop it opens in PCmanFM (unless you make a .desktop file with a `Thunar /dir/` command). If you change things about so that Thunar has the desktop, the right-click menu normal for clicking on folders shows when you click on the desktop which is not optimum, especially if you have a ton of commands on it.
 
 <br><br>
@@ -461,7 +467,10 @@ sudo geany /etc/xdg/menus/lxde-applications.menu</textarea>
 <br><br>
 3. change categories in any .desktop files (see above) so that they are added to the new menu category.
 <br><br>
-Problem: <span style="color:#800080;"><b>the "Other" category sits on the main menu with just about every executable on it from /usr/bin.</b></span><br>
+Problem: 
+<div class="prob"><b>the "Other" category sits on the main menu with just about every executable on it from /usr/bin.</b></div>
+<br>
+
 To solve it, edit the /etc/xdg/menus/lxde-applications.menu file and remove the "other" entry entirely.
 <br><br><br><b></b>
 

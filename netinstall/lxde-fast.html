@@ -4,10 +4,15 @@ description: Installing Debian from the Netinstall CD with LXDE - fast method - 
 title: LXDE fast install
 id: net
 ---
+
+<div class="parent"><a href="../netinstall.html">Netinstall</a> ></div>
+
+<div class="cont">
+
 <div class="onpage">
   <ul>
     <li>
-        On this page &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; <a href="#">TOP</a>
+        On page &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; <a href="#">TOP</a>
              <ul>
                 <li><a href="#1">Overview of the install</a></li>
                 <li><a href="#xorg">Xorg error</a></li>
@@ -27,9 +32,6 @@ id: net
    <a href="#4">Last set up things</a><br>
    <a href="#5">Post netinstall scripts</a><br>
 </td></tr></table></div>
-<div class="parent"><a href="../netinstall.html">Netinstall</a> ></div>
-
-<div class="cont">
 
 <h2 id="1" class="tag">Overview of the install</h2>
 updated June 2020
@@ -91,10 +93,10 @@ apt install gtk2-engines gtk2-engines-xfce gtk2-engines-murrine gtk2-engines-cle
 <br><br>
 <b id="xorg" class="tag">Possible error with Xorg</b> without installing a display manager, when you run startx:
 <br><br>
-<span style="color:#800080;">parse_vt_settings Cannot open /dev/tty0 (Permission Denied)</span>
+<span class="prob">parse_vt_settings Cannot open /dev/tty0 (Permission Denied)</span>
 <br><br>
 or<br>
-<span style="color:#800080;">xf86OpenConsole: Cannot open virtual console 7 (Permission Denied)</span>
+<span class="prob">xf86OpenConsole: Cannot open virtual console 7 (Permission Denied)</span>
 <br><br>
 fix with:
 <form>
